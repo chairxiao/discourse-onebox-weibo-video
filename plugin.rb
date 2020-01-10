@@ -9,7 +9,7 @@ Onebox = Onebox
 
 module Onebox
   module Engine
-    class WeiboOneVideobox
+    class WeiboVideoOnebox
 include Engine
 include StandardEmbed
 
@@ -26,8 +26,6 @@ def to_html
             width="#{WIDTH}" 
             height="#{HEIGHT}"
             frameborder='0'
-            webkitallowfullscreen
-            mozallowfullscreen
             allowfullscreen >
     </iframe>
     
@@ -36,5 +34,3 @@ end
 end
 end
 end
-
-
