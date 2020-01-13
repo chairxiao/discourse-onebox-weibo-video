@@ -8,28 +8,36 @@
 
 Onebox = Onebox
 
+register_asset "assets/javascripts/weibo.js"
+
 module Onebox
-   module Engine
-      class WeiboVideoOnebox
-         include Engine
- 
-         always_https
-         matches_regexp(/^(https?:\/\/)?video\.(h5\.)?weibo\.(com|cn)\/(.)+\/?$/)
- 
-         WIDTH  = 640
-         HEIGHT = 420
- 
-         def to_html
-          "<iframe src='#{@url}'
-            width='#{WIDTH}'
-            height='#{HEIGHT}'
-            scrolling='no'
-            frameborder='0'
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowfullscreen >
-            </iframe>" 
-         end
-      end
-   end
- end
+  module Engine
+     class WeiboVideoOnebox
+        include Engine
+
+        always_https
+        matches_regexp(/^(https?:\/\/)?video\.(h5\.)?weibo\.(com|cn)\/(.)+\/?$/)
+
+        WIDTH  = 640
+        HEIGHT = 420
+
+        def to_html
+
+         "
+         <iframe src='#{@url}'
+           width='#{WIDTH}'
+           height='#{HEIGHT}'
+           id='weiboiframe'
+           scrolling='no'
+           frameborder='0'
+           webkitallowfullscreen
+           mozallowfullscreen
+           allowfullscreen >
+           </iframe>
+           <br>
+           <a href='#{@url}' target='_blank'>微博视频地址：#{@url}</a>
+           " 
+        end
+     end
+  end
+end
