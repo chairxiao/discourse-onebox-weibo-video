@@ -8,7 +8,7 @@
 
 Onebox = Onebox
 
-register_asset "assets/javascripts/weibo.js"
+register_asset "javascripts/weibo.js"
 
 module Onebox
   module Engine
