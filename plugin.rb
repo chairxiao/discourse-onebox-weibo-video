@@ -24,18 +24,18 @@ module Onebox
         def to_html
 
          "
-         <iframe src='#{@url}'
+         <iframe 
+           id='weiboiframe'
+           src='#{@url}'
            width='#{WIDTH}'
            height='#{HEIGHT}'
-           id='weiboiframe'
+           onload='beforeLoad'
            scrolling='no'
            frameborder='0'
            webkitallowfullscreen
            mozallowfullscreen
            allowfullscreen >
            </iframe>
-           <br>
-           <a href='#{@url}' target='_blank'>微博视频地址：#{@url}</a>
            " 
         end
      end

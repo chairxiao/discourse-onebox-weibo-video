@@ -5,8 +5,10 @@
 //           '</style>';
 //   $(head).append(css);
 // });
+function beforeLoad(){
 var cssLink = document.createElement("link");
 cssLink.href = "../stylesheets/weibo.css"; 
 cssLink.rel = "stylesheet"; 
 cssLink.type = "text/css"; 
 frames['weiboiframe'].document.head.appendChild(cssLink);
+}
