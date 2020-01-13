@@ -29,7 +29,6 @@ module Onebox
            src='#{@url}'
            width='#{WIDTH}'
            height='#{HEIGHT}'
-           onload='beforeLoad'
            scrolling='no'
            frameborder='0'
            webkitallowfullscreen
